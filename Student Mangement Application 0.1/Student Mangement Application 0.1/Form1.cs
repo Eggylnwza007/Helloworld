@@ -80,32 +80,33 @@ namespace Student_Mangement_Application_0._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strData = string.Empty;
+            dataGridView1.Rows.Add(textBox2.Text,textBox3.Text,comboBox1.SelectedItem);
+            //string strData = string.Empty;
 
-            SaveFileDialog button1_Click = new SaveFileDialog();
-            button1_Click.Filter = "CSV (*.csv) | *.csv";
-            if (button1_Click.ShowDialog() == DialogResult.OK)
-            {
-                if (button1_Click.FileName != string.Empty)
-                {
+            //SaveFileDialog button1_Click = new SaveFileDialog();
+            //button1_Click.Filter = "CSV (*.csv) | *.csv";
+            //if (button1_Click.ShowDialog() == DialogResult.OK)
+            //{
+            //    if (button1_Click.FileName != string.Empty)
+            //    {
 
-                    int row = this.dataGridView1.Rows.Count;
-                    for (int i = 0; i < row; i++)
-                    {
-                        int column = this.dataGridView1.Columns.Count;
-                        for (int j = 0; j < column; j++)
-                        {
-                            if (this.dataGridView1.Rows[i].Cells[j].Value != null)
-                            {
-                                strData = this.dataGridView1.Rows[i].Cells[j].Value.ToString();
-                                //todo: save from dataGridView1 to variable
-                            }
-                        }
-                    }
+            //        int row = this.dataGridView1.Rows.Count;
+            //        for (int i = 0; i < row; i++)
+            //        {
+            //            int column = this.dataGridView1.Columns.Count;
+            //            for (int j = 0; j < column; j++)
+            //            {
+            //                if (this.dataGridView1.Rows[i].Cells[j].Value != null)
+            //                {
+            //                    strData = this.dataGridView1.Rows[i].Cells[j].Value.ToString();
+            //                    //todo: save from dataGridView1 to variable
+            //                }
+            //            }
+            //        }
                     //TODO add data ot data gridview
                     //TODO Calculate GPX, Max, Min
-                }
-            }
+            //    }
+            //}
         }
         private void label4_Click(object sender, EventArgs e)
         {
@@ -118,6 +119,16 @@ namespace Student_Mangement_Application_0._1
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }
